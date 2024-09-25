@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <title>Dashboard</title>
+    <style>
+        nav{
+            height: 4rem;
+            box-shadow: 0px 3px 8px #ececec;
+            width: 100%;
+            background-color: #fff;
+        }
+        .logo{
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        .left{
+            margin-left: 155vh;
+        }
+        ul li{
+            list-style: none;
+        }
+        #sidebar{
+            width: 19rem;
+            background: #ffffff;
+            margin-top: -5px;
+            box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+            position: fixed;
+            height: 100%;
+            padding-bottom: -200vh;
+        }
+        .sidebar-nav{
+            width: 90%;
+        }
+        .sidebar a{
+            color: #1f5272;
+            font-weight: bold;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+        .sidebar a:hover{
+            color: #2475a8;
+        }
+        
+        .body{
+            background-color: #f0f5f5;
+            /* height: 100vh; */
+            margin-left: 19rem;
+            margin-top: 3rem;
+            padding: 3vh;
+            font-weight: bold;
+        }
+        .card-icon{
+            background-color: #f8f8f8;
+            border-radius: 45%;
+            font-size: 40px;
+            padding: 5px;
+            color: #2475a8;
+        }
+        .color1{
+            color: #2475a8;
+        }
+        .color2{
+            color: #1f5272;
+        }
+        .card{
+             box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+        }
+        .card-img{
+            border-radius: 50%;
+            width: 8rem;
+            height: 8rem;
+        }
+        .about-card{
+            width: 60%;
+        }
+        .side-card{
+            width: 40%;
+            margin-left: 5rem;
+        }
+        .doctors-card{
+            width: 70%;
+            margin-right: 2rem;
+        }
+        .contacts-side-card{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <section class="nav top sticky-top" style="position: fixed;">
+        <li class="">
+            <nav class="nav navbar" id="navbar">
+                <div class="d-flex">
+                    <p class="logo h1"><a href="" class="nav-link color1"><span class="bi bi-hospital"></span>  Dr J'Damour</a></p>
+                    <div class="left d-flex">
+                        <span class="notification-item my-3">
+                            <i class="bi bi-bell h5 text-dark"></i>
+                            <i class="bi bi-chat-left h5 text-dark mx-4"></i>
+                        </span>
+                        <span><div class="profile-names py-1 d-flex">
+                            <i class="bi bi-person-circle h1 text-primary"></i>
+                            
+                                <h5 style="color: #2475a8; cursor: pointer; font-size: 14px;" class="pt-3">Dr J'Damour</h5>
+                            </div>
+                        </span>
+                </div>
+                </div>
+            </nav>
+        </li>
+    </section>
+    <!-- side nav -->
+     <div class="d-flex ">
+        <aside class="sidebar my-5" id="sidebar">
+            <ul class="sidebar-nav " id="sidebar-nav">
+                <div class="nav-item  py-2  my-3">
+                        <a href="" class=" px-4 nav-link p-2 my-2 bg-light form-control">
+                            <i class="bi bi-grid"></i>
+                            <span class="text-success">Dashboard</span>
+                        </a>
+                        <a href="appointments" class=" px-4 nav-link p-2 my-2 bg-light form-control">
+                            <i class="bi bi-card-list"></i>
+                            <span>Appointments</span>
+                        </a>
+                        <a href="faqs" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-envelope"></i>
+                            <span>Contacts</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-people"></i>
+                            <span>Users</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-journal-text"></i>
+                            <span>Record Data</span>
+                        </a>
+                        <a href="patients" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Patients</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Coming Soon</span>
+                        </a>
+                </div>
+                <a href="" id="side-profile" class="mt-5 nav-link px-4 p-2 form-control">
+                    <i class="bi bi-bell h2"></i>
+                    <span class="badge badge-number bg-primary">4 <i>Notifications</i></span>
+                </a>
+                <a href="" id="side-profile" class=" nav-link px-4 p-2 form-control">
+                    <i class="bi bi-chat-left h2"></i>
+                    <span class="badge badge-number bg-primary">5 <i>Messages</i></span>
+                </a>
+                <a href="" id="side-profile" class="nav-link px-4 p-2 form-control">
+                    <i class="bi bi-question-circle h3"></i>
+                    <span>Help</span>
+                </a>
+                <a href="" id="side-profile" class=" nav-link px-4 p-2 form-control">
+                    <i class="bi bi-person h2"></i>
+                    <span>Profile</span>
+                </a>
+            </ul>
+        </aside>
+        <div class="body" >
+            <div class="page-tittle" style="color: #1f5272;">
+                <h3>Dashboard</h3>
+                <p style="color: #2475a8;" class="nav-link">Home / <i class="text-dark">Dashboard</i></p>
+            </div>
+            <div class="d-flex cards">
+                <div class="card d-flex  m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">Appointments | <i class="text-dark">this week</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-card-list h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">30</i>
+                            <p class="text-success">12% <span class="text-dark">increase</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card d-flex m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">Appointments | <i class="text-dark">this week</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-people text-success h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">200</i>
+                            <p class="text-success">20% <span class="text-dark">increase</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card d-flex m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">F.A.Qs | <i class="text-dark">this Month</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-question-circle text-danger h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">30</i>
+                            <p class="text-danger">3% <span class="text-dark">decrease</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-title mx-4 pt-3">
+                    <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>Home</i></a> <i class="mx-5">...</i></span>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="table-head">
+                            <th class="text-light bg-primary">Title </th>
+                            <th class="text-light bg-primary">Description</th>
+                            <th class="text-light bg-primary">Action</th>
+                        </thead>
+                        <%home.forEach((data)=>{%>
+                            <tbody class="table-body">
+                                <td><%=data.title%></td>
+                                <td><%=data.description%></td>
+                                <td class="text-light">
+                                    <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                    <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                </td>
+                            </tbody>
+                        <%});%>
+                    </table>
+                </div>
+            </div>
+            <!-- home Content -->
+            <section class="d-flex">
+                <!-- About Card -->
+                <div class="card mt-4 about-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>Home-content card</i></a> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="table-head">
+                                <th class="text-light bg-primary">Title </th>
+                                <th class="text-light bg-primary">Description</th>
+                                <th class="text-light bg-primary">Action</th>
+                            </thead>
+                            <%homecontent.forEach((data)=>{%>
+                                <tbody class="table-body">
+                                    <td><%=data.title%></td>
+                                    <td><%=data.description%></td>
+                                    <td class="text-light">
+                                        <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                        <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                    </td>
+                                </tbody>
+                            <%});%>
+                        </table>
+                    </div>
+                </div>
+                <!-- homeservice -->
+                <div class="card mt-4  mx-5 about-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>Home-service</i></a> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="table-head">
+                                <th class="text-light bg-primary">Title </th>
+                                <th class="text-light bg-primary">Description</th>
+                                <th class="text-light bg-primary">Action</th>
+                            </thead>
+                            <%homeservice.forEach((data)=>{%>
+                                <tbody class="table-body">
+                                    <td><%=data.title%></td>
+                                    <td><%=data.description%></td>
+                                    <td class="text-light">
+                                        <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                        <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                    </td>
+                                </tbody>
+                            <%});%>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- about  -->
+            <section class="d-flex">
+                <!-- About Card -->
+                <div class="card mt-4 about-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>About</i></a> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="table-head">
+                                <th class="text-light bg-primary">Image</th>
+                                <th class="text-light bg-primary">Title </th>
+                                <th class="text-light bg-primary">Description</th>
+                                <th class="text-light bg-primary">Action</th>
+                            </thead>
+                            <%about.forEach((data)=>{%>
+                                <tbody class="table-body">
+                                    <td><img src="uploads/<%=data.image%>" alt="" class="card-img"></td>
+                                    <td><%=data.title%></td>
+                                    <td><%=data.description%></td>
+                                    <td class="text-light">
+                                        <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                        <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                    </td>
+                                </tbody>
+                            <%});%>
+                        </table>
+                    </div>
+                </div>
+                <!-- news -->
+                <div class="card mt-4 side-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">News & Updates | <i class="text-dark">This week</i><i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <i>Lorem ipsum dolor sit amet consectetur, adipisicing 
+                            elit. Ut, quaerat optio. Illo illum excepturi repudiandae, 
+                            aliquam minus ipsum voluptas laudantium totam eveniet iure 
+                            ratione adipisci dolor, nihil voluptate quos ea?</i>
+                    </div>
+                </div>
+            </section>
+            <!-- departments -->
+            <div class="card mt-4">
+                <div class="card-title mx-4 pt-3">
+                    <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>Departments</i></a> <i class="mx-5">...</i></span>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="table-head">
+                            <th class="text-light bg-primary">Image</th>
+                            <th class="text-light bg-primary">Title </th>
+                            <th class="text-light bg-primary">Description</th>
+                            <th class="text-light bg-primary">Action</th>
+                        </thead>
+                        <%departments.forEach((data)=>{%>
+                            <tbody class="table-body">
+                                <td><img src="uploads/<%=data.image%>" alt="" class="card-img"></td>                                
+                                <td><%=data.title%></td>
+                                <td><%=data.description%></td>
+                                <td class="text-light">
+                                    <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                    <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                </td>
+                            </tbody>
+                        <%});%>
+                    </table>
+                </div>
+            </div>
+            <section class="d-flex">
+                <!-- Doctors Card -->
+                <div class="card mt-4 doctors-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>About</i></a> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="table-head">
+                                <th class="text-light bg-primary">Image</th>
+                                <th class="text-light bg-primary">Name </th>
+                                <th class="text-light bg-primary">About</th>
+                                <th class="text-light bg-primary">Description</th>
+                                <th class="text-light bg-primary">Contact</th>
+                                <th class="text-light bg-primary">Action</th>
+                            </thead>
+                            <%team.forEach((data)=>{%>
+                                <tbody class="table-body">
+                                    <td><img src="uploads/<%=data.image%>" alt="" class="card-img"></td>
+                                    <td><%=data.name%></td>
+                                    <td><%=data.about%></td>
+                                    <td><%=data.description%></td>
+                                    <td><%=data.contact%></td>
+                                    <td class="text-light">
+                                        <a href="/delete/<%=data.id%>" class="nav-link btn bg-danger" aria-disabled="false">DELETE</a>
+                                        <a href="/edit/<%=data.id%>" class="nav-link bg-primary btn mt-2">edit</a>
+                                    </td>
+                                </tbody>
+                            <%});%>
+                        </table>
+                    </div>
+                </div>
+                <!-- Our contacts -->
+                <div class="card mt-4 contacts-side-card">
+                    <div class="card-title mx-4 pt-3">
+                        <span style="color: #2475a8; font-size: 14px;">Our Contacts | <i class="text-dark"></i><i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr><p class="color1 bi bi-globe-europe-africa"> Location <i class="text-dark">KK 509st, KIGALI, RWANDA</i></p></tr>
+                            <tr><p class="color1 bi bi-telephone"> Call <i class="text-dark">0789389389</i></p></tr>
+                            <tr><p class="color1 bi bi-envelope"> Email <i class="text-dark">drj'damour@gmail.com</i></p></tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer -->
+            <hr class="text-primary">
+            <center class="py-4">
+                <p class="about">© copyright <i style="font-weight: bold;"> Drj'damour </i> All rights Reserved®</p>
+                Designed by <span class="about text-primary">SB4r</span>
+            </center>
+        </div>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

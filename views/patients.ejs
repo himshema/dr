@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <title>Patients</title>
+    <style>
+        nav{
+            height: 4rem;
+            box-shadow: 0px 3px 8px #ececec;
+            width: 100%;
+            background-color: #fff;
+        }
+        .logo{
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        .notification-item{
+            margin-left: 78rem;
+        }
+        ul li{
+            list-style: none;
+        }
+        #sidebar{
+            width: 21rem;
+            background: #ffffff;
+            margin-top: -5px;
+            box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+            position: fixed;
+            height: 100%;
+            padding-bottom: -200vh;
+        }
+        .sidebar-nav{
+            width: 90%;
+        }
+        .sidebar a{
+            color: #1f5272;
+            font-weight: bold;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+        .sidebar a:hover{
+            color: #2475a8;
+        }
+        #side-profile {
+            padding-top: 200px;
+        }
+        .body{
+            background-color: #f0f5f5;
+            /* height: 100vh; */
+            width: 100%;
+            margin-left: 21rem;
+            margin-top: 3rem;
+            padding: 3vh;
+            font-weight: bold;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .bolder{
+            font-weight: bolder;
+        }
+        .color1{
+            color: #2475a8;
+        }
+        .color2{
+            color: #1f5272;
+        }
+        
+        .bdrbs{
+            display: flex;
+            margin-left: 560px;
+        }
+        .bdrbb{
+            display: flex;
+            margin-left: 550px;
+        }
+        .bdrb1{
+            border-bottom: 1px solid #000;
+            width: 50px;
+        }
+        .bdrb2{
+            border-bottom: 5px solid #1f5272;
+            width: 70px;
+        }
+        .bdrb3{
+            border-bottom: 1px solid #000 ;
+        }
+        .card{
+             box-shadow: 8px 0px 20px rgba(1, 41, 112, 0.1);
+        }
+        .card:hover{
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <section class="nav top sticky-top" style="position: fixed;">
+        <li class="">
+            <nav class="nav navbar" id="navbar">
+                <div class="d-flex">
+                    <p class="logo h1"><a href="" class="nav-link"><span class="bi bi-hospital"></span>  Dr J'Damour</a></p>
+                    <span class="notification-item my-3">
+                        <i class="bi bi-bell h5 text-dark"></i>
+                        <i class="bi bi-chat-left h5 text-dark mx-4"></i>
+                    </span>
+                    <span class="profile d-flex" style="cursor: pointer;">
+                        <i class="bi bi-person-circle h1 text-primary"></i>
+                        <div class="profile-names my-3 d-flex">
+                            <h5 style="color: #2475a8; cursor: pointer;">Dr J'Damour</h5>
+                        </div>
+                    </span>
+                </div>
+            </nav>
+        </li>
+    </section>
+    <!-- side nav -->
+     <div class="d-flex ">
+        <aside class="sidebar my-5" id="sidebar">
+            <ul class="sidebar-nav " id="sidebar-nav">
+                <div class="nav-item  py-2  my-3">
+                        <a href="dashboard" class=" px-4 nav-link p-2 my-2 bg-light form-control">
+                            <i class="bi bi-grid"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="appointments" class=" px-4 nav-link p-2 my-2 bg-light form-control">
+                            <i class="bi bi-card-list"></i>
+                            <span>Appointments</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-envelope"></i>
+                            <span>Contacts</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-people"></i>
+                            <span>Users</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-journal-text"></i>
+                            <span>Record Data</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-people"></i>
+                            <span class="text-success">Patients <span class="mx-4 bi bi-chevron-right"></span></span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Coming Soon</span>
+                        </a>
+                        <a href="" class="nav-link px-4 p-2 my-2 bg-light form-control">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Coming Soon</span>
+                        </a>
+                </div>
+                <a href="" id="side-profile" class="mt-5 nav-link px-4 p-2 form-control">
+                    <i class="bi bi-bell h2"></i>
+                    <span class="badge badge-number bg-primary">4 <i>Notifications</i></span>
+                </a>
+                <a href="" id="side-profile" class=" nav-link px-4 p-2 form-control">
+                    <i class="bi bi-chat-left h2"></i>
+                    <span class="badge badge-number bg-primary">5 <i>Messages</i></span>
+                </a>
+                <a href="" id="side-profile" class="nav-link px-4 p-2 form-control">
+                    <i class="bi bi-question-circle h3"></i>
+                    <span>Help</span>
+                </a>
+                <a href="" id="side-profile" class=" nav-link px-4 p-2 form-control">
+                    <i class="bi bi-person h2"></i>
+                    <span>Profile</span>
+                </a>
+            </ul>
+        </aside>
+        <div class="body" >
+            <div class="page-tittle" style="color: #1f5272;">
+                <h3>F.A.Qs</h3>
+                <p style="color: #2475a8;" class="nav-link">Home / dashboard / <i class="text-dark">Patients</i></p>
+            </div>
+            <div class="d-flex cards mx-5">
+                <div class="card d-flex  m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">Appointments | <i class="text-dark">this week</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-card-list h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">30</i>
+                            <p class="text-success">12% <span class="text-dark">increase</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card d-flex m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">Appointments | <i class="text-dark">this week</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-people text-success h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">200</i>
+                            <p class="text-success">20% <span class="text-dark">increase</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card d-flex m-4">
+                    <div class="card-title mx-4 mt-4">
+                        <span style="color: #2475a8; font-size: 14px;">F.A.Qs | <i class="text-dark">this Month</i> <i class="mx-5">...</i></span>
+                    </div>
+                    <div class="card-body p-4 d-flex">
+                        <span class="card-icon bi bi-question-circle text-danger h1 p-4"></span>
+                        <div class="wqeds px-3">
+                            <i class="h1 color2">30</i>
+                            <p class="text-danger">3% <span class="text-dark">decrease</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button color1 bold h1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h3>Add New Patient</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show  bg-light" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="insert">        
+                            <div class="container appointment-title">
+                                <center><h2>New Patient</h2></center>                                
+                            </div>
+                            <div class="card mt-4 bg-light">
+                                <div class="card-title mx-4 pt-3">
+                                    <span style="color: #2475a8; font-size: 14px;">Home | <a href="recorddata" class="text-dark"><i>Home</i></a> <i class="mx-5">....</i></span>
+                                </div>
+                                <div class="card-body">
+                                    <form action="/addHomecontent" method="post">
+                                        <div class="personal-details d-flex form-group">
+                                            <input type="text" class="form-control m-2" name="names" placeholder="Patient Names">
+                                            <input type="text" class="form-control m-2" name="Email" placeholder="Email">
+                                            <input type="text" class="form-control m-2" name="phone" placeholder="phonenumber">
+                                        </div>
+                                        <div class="personal-details d-flex form-group">
+                                            <select name="doctors_name" id="" class="form-control m-2">
+                                                <option value="asd">Select doctor</option>
+                                                <%team.forEach((data)=>{%>
+                                                    <option value="doctor"><%=data.name%></option>
+                                                <%});%>
+                                            </select>
+                                            <input type="text" class="form-control m-2" name="description" placeholder="Description">
+                                        </div>
+                                        <div class="personal-details d-flex form-group">
+                                            <input type="text" class="form-control m-2" name="recomendations" placeholder="recomendations">
+                                            <input type="text" class="form-control m-2" name="appointment" placeholder=" next appointment">
+                                        </div> 
+                                        <div class="personal-details d-flex form-group">
+                                            <input type="text" class="form-control m-2" name="payment" placeholder="payment">
+                                            <input type="text" class="form-control m-2" name="current_status" placeholder=" status">
+                                        </div>
+                                        <center>
+                                            <button class="btn submit-app bg-primary text-center text-light submit" type="submit">Add Patient</button>
+                                        </center>
+                                    </form>                    
+                                </div>
+                            </div>
+                          </div>  
+                        </div>
+                  </div>
+                </div>
+                
+                <div class="card-title mx-5 pt-3 mt-5">
+                    <!-- Home | <a href="recorddata" class="text-dark"><i>Home</i></a> <i class="mx-5">...</i> -->
+                    <span style="color: #194b69; font-size: 19px;">Patients List</span>
+                </div>
+            <!-- Data retrieval -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="table-head">
+                            <th class="text-light bg-primary">Names </th>
+                            <th class="text-light bg-primary">Email </th>
+                            <th class="text-light bg-primary">Phone </th>
+                            <th class="text-light bg-primary">Doctor </th>
+                            <th class="text-light bg-primary">Description</th>
+                            <th class="text-light bg-primary">Recomendations</th>
+                            <th class="text-light bg-primary">Appointment </th>
+                            <th class="text-light bg-primary">Payment</th>
+                            <th class="text-light bg-primary">Status </th>
+                            <th class="text-light bg-primary">Date</th>
+                            <th class="text-warning bg-primary">ACTION</th>
+                        </thead>
+                            <tbody class="table-body">
+                                <td>Names </td>
+                                <td>Email </td>
+                                <td>Phone </td>
+                                <td>Doctor </td>
+                                <td>Description</td>
+                                <td>Recomendations</td>
+                                <td>Appointment </td>
+                                <td>Payment</td>
+                                <td>Status </td>
+                                <td>Date</td>
+                                <td class="text-light">
+                                    <a href="" class="nav-link bg-warning    btn mt-2">edit</a>
+                                </td>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+                
+            
+
+            <!-- footer -->
+            <hr class="text-primary">
+            <center class="py-4">
+                <p class="about">© copyright <i style="font-weight: bold;"> Drj'damour </i> All rights Reserved®</p>
+                Designed by <span class="about text-primary">SB4r</span>
+            </center>
+            </div>
+        </div>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
